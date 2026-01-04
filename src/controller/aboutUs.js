@@ -19,7 +19,6 @@ exports.addAboutUs = async (req, res) => {
           const logoResult = await uploadImage(logo);
           logoUrl = logoResult.Location;
       }
-
       let heroImageUrl;
       if (heroImage) {
           const heroImageResult = await uploadImage(heroImage);
