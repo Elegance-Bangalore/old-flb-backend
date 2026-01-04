@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmland</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Basic reset */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: "Open Sans", sans-serif;
+      }
+ 
+      /* General styles */
+      body {
+        background-color: #ffffff;
+        margin: 0 auto;
+        max-width: 700px;
+        box-sizing: border-box;
+        padding: 1.25rem;
+      }
+ 
+      .container {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 1.25rem;
+        box-sizing: border-box;
+        background-color: #f4fffb;
+      }
+ 
+      .logo {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+ 
+      .logo img {
+        width: 160px;
+        height: auto;
+      }
+ 
+      .content {
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+ 
+      .content .section-title {
+        font-size: 15px;
+        text-align: left;
+        color: #00a76f;
+        font-weight: 600;
+      }
+ 
+      .content p {
+        font-size: 0.9rem;
+        text-align: justify;
+        color: #212b36;
+        line-height: 25px;
+        margin: 15px 0;
+      }
+ 
+      .inquiry-details {
+        border-top: 1px solid #ade9d5;
+        border-bottom: 1px solid #ade9d5;
+        padding: 10px 0;
+        margin: 10px 0;
+      }
+ 
+      .inquiry-details .details-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+ 
+      .inquiry-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-block: 3px 5px;
+      }
+ 
+      .inquiry-details p {
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin-top: 10px;
+      }
+ 
+      .signature {
+        font-size: 0.9rem;
+        text-align: left;
+        margin: 20px;
+        color: #212b36;
+      }
+ 
+      .signature span {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #212b36;
+      }
+ 
+      .footer {
+        background: #00a76f;
+        border-top: 2px solid white;
+        padding: 0.3rem 0.2rem;
+        margin-top: 20px;
+        color: white !important;
+        font-size: 1.125rem;
+        font-weight: 600;
+        text-align: center;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+ 
+      .footer a {
+        color: #fff;
+        font-size: 0.85rem;
+        text-decoration: none;
+        margin-left: 0.15rem;
+      }
+ 
+      .footer img {
+        width: 1.25rem;
+        height: auto;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+ 
+      .footer p {
+        font-size: 1rem;
+        color: #fff;
+        margin: 0;
+        box-sizing: border-box;
+      }
+ 
+      .footer-links {
+        margin-left: auto;
+      }
+ 
+      .inquiry-details {
+        text-align: start;
+        font-size: 0;
+      }
+ 
+      .inquiry-details .property-card {
+        display: inline-block;
+        width: 30%;
+        overflow: hidden;
+        margin: 0.4rem 0.2rem;
+        border-radius: 12px;
+        border: 1px solid #c8c8c8;
+      }
+ 
+      .inquiry-details .property-card img {
+        width: 100%;
+        height: 7rem;
+      }
+ 
+      .inquiry-details .property-card .card-content {
+        padding: 0.2rem 0.4125rem 0.625rem;
+      }
+ 
+      .inquiry-details .property-card .card-content h4 {
+        margin: 0;
+        font-size: 0.7rem;
+      }
+ 
+      .inquiry-details .property-card .card-content p {
+        font-size: 0.6rem;
+        margin: 2px;
+        margin: 0;
+      }
+ 
+      .inquiry-details .property-card .card-content .card-numeric {
+        display: flex;
+      }
+ 
+      .inquiry-details .property-card .card-content .card-numeric h4 {
+        margin: 0.4375rem 0rem;
+        margin-right: auto;
+      }
+ 
+      .inquiry-details .property-card .card-content .card-numeric h6 {
+        margin: 0.4375rem 0rem;
+        margin-right: auto;
+      }
+ 
+      .inquiry-details .property-card .card-content .card-numeric p {
+        margin: 0.4375rem 0rem;
+        font-size: 0.75rem;
+      }
+ 
+      .inquiry-details .property-card .card-content .card-button {
+        display: inline-block;
+        width: 97%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+ 
+      .inquiry-details .property-card .card-content .card-button .get {
+        border: 1px solid #00a76f;
+        border-radius: 14px;
+        color: #00a76f;
+        text-align: center;
+        padding: 4px;
+        font-size: 0.55rem;
+        background-color: white;
+        margin-bottom: 3px;
+        width: 100%;
+        display: inline-block;
+      }
+ 
+      .inquiry-details .property-card .card-content .card-button .view {
+        background-color: #00a76f;
+        border: 1px solid #00a76f;
+        color: white;
+        text-align: center;
+        border-radius: 14px;
+        padding: 4px;
+        font-size: 0.55rem;
+        text-decoration: none;
+        width: 100%;
+        display: inline-block;
+      }
+      .banner {
+        margin: 20px 0;
+        background-image: url("https://flb-public.s3.ap-south-1.amazonaws.com/evo-mail-banner.png");
+        aspect-ratio: 16 / 2;
+        height: 7rem;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem;
+        background-repeat: no-repeat;
+      }
+ 
+      /* Responsive styles */
+      @media only screen and (max-width: 600px) {
+        body {
+          padding: 0;
+        }
+ 
+        .card-content h4 {
+          font-size: 0.75rem;
+        }
+ 
+        .card-content .card-numeric h4 {
+          font-size: 0.65rem;
+          margin-top: 13px !important;
+        }
+ 
+        .card-content .card-numeric p {
+          font-size: 0.55rem !important;
+        }
+ 
+        .container {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 auto;
+          padding: 0.25rem;
+        }
+ 
+        .content {
+          padding: 0;
+        }
+ 
+        .logo img {
+          width: 120px;
+        }
+ 
+        .content p,
+        .inquiry-details p {
+          font-size: 0.7rem;
+          margin: 10px 0;
+        }
+ 
+        .footer img {
+          margin-left: 0;
+        }
+ 
+        .inquiry-details .property-card {
+          display: inline-block;
+          width: 46%;
+          margin-inline: .2rem;
+        }
+ 
+        .inquiry-details .property-card .card-content .card-button .get {
+          font-size: 0.45rem;
+          width: 100%;
+          display: block;
+          margin-right: 0;
+        }
+ 
+        .inquiry-details .property-card .card-content .card-button .view {
+          font-size: 0.45rem;
+          width: 100%;
+          display: block;
+        }
+ 
+        .footer {
+          color: #fff;
+        }
+ 
+        .footer p {
+          color: #fff;
+        }
+ 
+        .footer a {
+          font-size: 0.5rem;
+        }
+ 
+        .footer img {
+          width: 1rem;
+        }
+      }
+    </style>
+  </head>
+ 
+  <body>
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="#"
+          ><img
+            src="https://flb-public.s3.ap-south-1.amazonaws.com/Farmlandlogo%281%29.png"
+            alt="logo"
+        /></a>
+      </div>
+ 
+      <!-- Content -->
+      <div class="content">
+        <p class="section-title">Property Recommendations</p>
+ 
+        <div class="general-con">
+          <p style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0">
+            Dear <%= buyerName %>,
+          </p>
+          <p>
+            We are excited to share with you the latest properties on Farmland
+            Bazaar, along with some nearby options that match your city.
+          </p>
+        </div>
+ 
+        <!-- Inquiry Details -->
+        <h4 class="inquiry-title">Latest Properties:</h4>
+        <div class="inquiry-details">
+          <% latestProperties.forEach(property=> { %>
+          <div class="property-card">
+            <div>
+              <img src="<%= property.heroImage %>" alt="farm" />
+            </div>
+            <div class="card-content">
+              <h4><%= property.propertyTitle %></h4>
+              <p><%= property.city %></p>
+              <div class="card-numeric">
+                <h6>Price : <%= property.price %></h6>
+                <h6>Area : <%= property.totalAcre %></h6>
+              </div>
+              <div class="card-button">
+                <a class="get"
+                href="<%= `${process.env['buyer_propert_details']}/${property.propertyType}/${property.propertyTitle}/${property.propertyCode}` %>"
+                > Get Seller Details </a>
+                <a
+                  class="view"
+                  href="<%= `${process.env['buyer_propert_details']}/${property.propertyType}/${property.propertyTitle}/${property.propertyCode}` %>"
+                >
+                  View Property
+                </a>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+        <!-- Conditionally render Nearby Properties section -->
+        <% if (typeof nearbyProperties !=='undefined' &&
+        nearbyProperties.length> 0) { %>
+        <h4 class="inquiry-title">Nearby Properties:</h4>
+        <div class="inquiry-details">
+          <% nearbyProperties.forEach(property=> { %>
+          <div class="property-card">
+            <div>
+              <img src="<%= property.heroImage %>" alt="farm" />
+            </div>
+            <div class="card-content">
+              <h4><%= property.propertyTitle %></h4>
+              <p><%= property.city %></p>
+              <div class="card-numeric">
+                <h6>Price : <%= property.price %></h6>
+                <h6>Area : <%= property.totalAcre %></h6>
+              </div>
+              <div class="card-button">
+                <a class="get"
+                href="<%= `${process.env['buyer_propert_details']}/${property.propertyType}/${property.propertyTitle}/${property.propertyCode}` %>"
+                > Get Seller Details </a>
+                <a
+                  class="view"
+                  href="<%= `${process.env['buyer_propert_details']}/${property.propertyType}/${property.propertyTitle}/${property.propertyCode}` %>"
+                >
+                  View Property
+                </a>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+        <% } %>
+        <div>
+          <strong>View all Properties :</strong>
+          <a
+            style="color: #2581e3"
+            href="<%= `${process.env['buyer_propert_details']}` %>"
+            >Click here</a
+          >
+        </div>
+ 
+        <p>
+          For further assistance or clarification, please don't hesitate to
+          contact our support team at
+          <a
+            href="#"
+            style="color: #00a76f; font-weight: 700; text-decoration: none"
+            >info@farmlandbazaar.com</a
+          >.
+        </p>
+        <p>We eagerly await your response!</p>
+ 
+        <!-- Signature -->
+        <p class="signature">
+          Best Regards,<br />
+          <span>Farmland Bazaar</span>
+        </p>
+ 
+        <!-- Banner -->
+        <div class="banner"></div>
+        <!-- Footer -->
+        <div class="footer">
+          <p>Farmland Bazaar</p>
+          <span class="footer-links">
+            <span>
+              <a href="https://farmlandbazaar.com/terms">Terms of Service</a>
+              <a href="https://farmlandbazaar.com/privacy-policy"
+                >Privacy Policy</a
+              >
+            </span>
+            <span>
+              <a href="https://www.youtube.com/channel/UCozy6ntUQTBuZI1I3IwoTCw"
+                ><img
+                  src="https://flb-public.s3.ap-south-1.amazonaws.com/youtube.png"
+                  alt="youtube"
+              /></a>
+              <a href="https://www.instagram.com/farmlandbazaar/"
+                ><img
+                  src="https://flb-public.s3.ap-south-1.amazonaws.com/instagram.png"
+                  alt="instagram"
+              /></a>
+              <a href="https://www.facebook.com/farmlandbazaar"
+                ><img
+                  src="https://flb-public.s3.ap-south-1.amazonaws.com/facebook%281%29.png"
+                  alt="facebook"
+              /></a>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

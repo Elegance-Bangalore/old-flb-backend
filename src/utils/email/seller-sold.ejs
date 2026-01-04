@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmland</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style></style>
+
+  <body bgcolor="grey" style="font-family: 'Open Sans', sans-serif">
+    <div style="background-color: #f4fffb; margin: 60px auto; width: 700px">
+      <div
+        class="card"
+        style="
+          padding: 20px 20px 0 20px;
+          text-align: left;
+          background-color: #f4fffb;
+          margin-bottom: 2.3rem;
+        "
+      >
+        <a href="#"
+          ><img
+            src="https://flb-public.s3.ap-south-1.amazonaws.com/Farmlandlogo%281%29.png"
+            alt="logo"
+            width="160px"
+            style="margin-left: 28px; margin-top: 20px"
+        /></a>
+      </div>
+      <div class="card" style="padding: 10px 0px; background: #f4fffb">
+        <p
+          style="
+            font-size: 15px;
+            text-align: Left;
+            font-family: 'Open Sans', sans-serif;
+            margin-left: 50px;
+            padding-bottom: 1rem;
+            margin-bottom: 20px;
+            margin-top: 0px;
+          "
+        >
+          <span style="color: #00a76f; font-size: 1.35rem; font-weight: 600"
+            >Property Sold-Out
+          </span>
+        </p>
+        <div class="" style="margin-left: 50px; margin-bottom: 50px">
+          <p style="font-size: 12px; text-align: left; line-height: 25px">
+            <span style="color: #212b36; font-size: 1.15rem; font-weight: 600"
+              >Dear <%= Name %> </span
+            ><br />
+          </p>
+          <p
+            style="
+              color: #212b36;
+              font-size: 0.9rem;
+              font-weight: 400;
+              margin-top: 1rem;
+              text-align: justify;
+            "
+          >
+            Your Posted property <strong><%= propertyName %></strong> has been
+            sold-out.
+          </p>
+        </div>
+
+        <div
+          style="
+            padding: 2px 0px;
+            margin-left: 3rem;
+            margin-right: 3rem;
+            border-top: 1px solid #ade9d5;
+            border-bottom: 1px solid #ade9d5;
+          "
+        >
+          <p
+            style="
+              color: #212b36;
+              font-size: 0.9rem;
+              font-weight: 400;
+              margin-top: 1rem;
+              text-align: justify;
+            "
+          >
+            Click the link to check the details of property:
+            <a
+              style="color: #0095ff"
+              href="<%= `${process.env['seller_propert']}/${propertyCode}` %>"
+              >Click Here</a
+            >
+          </p>
+        </div>
+      </div>
+      <p
+        style="
+          font-size: 12px;
+          text-align: left;
+          margin-left: 50px;
+          margin-right: 50px;
+          line-height: 25px;
+          padding-bottom: 1rem;
+          margin-top: 20px;
+        "
+      >
+        <span
+          style="
+            color: #212b36;
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin-top: 1rem;
+            text-align: justify;
+          "
+          >For any inquiries or any detailed information, please don't hesitate
+          to <br />
+          contact us at
+          <a
+            href="#"
+            style="color: #00a76f; font-weight: 700; text-decoration: none"
+            >info@farmlandbazaar.com</a
+          >.
+        </span>
+      </p>
+      <p
+        style="
+          font-size: 12px;
+          text-align: left;
+          margin-left: 50px;
+          margin-right: 50px;
+          line-height: 25px;
+          padding-bottom: 1rem;
+          margin-top: 0px;
+        "
+      >
+        <span
+          style="
+            color: #212b36;
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin-top: 1rem;
+            text-align: justify;
+          "
+          >We eagerly await your message!</span
+        >
+      </p>
+
+      <p style="text-align: Left; margin-left: 50px">
+        <span style="font-size: 0.9rem">Best Regards,</span> <br />
+        <span style="color: #212b36; font-size: 1rem; font-weight: 600"
+          >Team Farmland Bazaar
+        </span>
+      </p>
+      <div style="margin: 50px 50px">
+        <div
+          style="
+            background-image: url('https://flb-public.s3.ap-south-1.amazonaws.com/evo-mail-banner.png');
+            padding: 0 2rem;
+            aspect-ratio: 16 / 2;
+            background-size: cover;
+            background-position: center;
+            border-radius: 1rem;
+            background-repeat: no-repeat;
+          "
+        >
+        </div>
+      </div>
+      <div
+        class="card"
+        style="
+          background: #00a76f;
+          width: 700px;
+          border-top: 2px solid white;
+          padding: 1px 0px;
+          margin-top: 50px;
+        "
+      >
+        <p style="font-size: 15px; text-align: Left; margin-left: 50px">
+          <span style="color: white; font-size: 1.35rem; font-weight: 600">
+            Farmland Bazaar
+            <span style="margin-left: 15%">
+              <a href="https://farmlandbazaar.com/terms" style="color: #fff; font-size: .85rem;">Terms of Service</a>
+              <a href="https://farmlandbazaar.com/privacy-policy" style="color: #fff; margin: 0 1rem; font-size: .85rem;">Privacy Policy</a>
+              <a href="https://www.youtube.com/channel/UCozy6ntUQTBuZI1I3IwoTCw" style="color: #fff; display: inline-block;"
+                ><img
+                  style="width: 1.25rem; aspect-ratio: 1/1; vertical-align: middle; background-color: #00a76f;"
+                  src="https://flb-public.s3.ap-south-1.amazonaws.com/youtube.png"
+                  alt="youtube"
+              /></a>
+              <a href="https://www.instagram.com/farmlandbazaar/" style="color: #fff; display: inline-block;"
+                ><img
+                  style="width: 1.1rem;  aspect-ratio: 1/1; vertical-align: middle"
+                  src="https://flb-public.s3.ap-south-1.amazonaws.com/instagram.png"
+                  alt="instagram"
+              /></a>
+              <a href="https://www.facebook.com/farmlandbazaar" style="color: #fff; display: inline-block;"
+                ><img
+                  style="width: 1.115rem;  aspect-ratio: 1/1; vertical-align: middle"
+                  src="https://flb-public.s3.ap-south-1.amazonaws.com/facebook%281%29.png"
+                  alt="facebook"
+              /></a>
+            </span>
+          </p>
+        </div>
+      </div>
+    </body>
+  </html>
+  

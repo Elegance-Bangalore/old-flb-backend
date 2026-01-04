@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .details {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .label {
+            font-weight: bold;
+            color: #666;
+        }
+        .value {
+            color: #333;
+        }
+        .warning {
+            color: #dc3545;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8d7da;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Developer Account Deletion Notification</h2>
+            <p>A developer account has been deleted from the system.</p>
+        </div>
+        
+        <div class="details">
+            <div class="section">
+                <h3>Deleted Developer Details</h3>
+                <p><span class="label">Name:</span> <span class="value"><%= deletedUser.name %></span></p>
+                <p><span class="label">Email:</span> <span class="value"><%= deletedUser.email %></span></p>
+                <p><span class="label">Phone:</span> <span class="value"><%= deletedUser.phone %></span></p>
+                <p><span class="label">Role:</span> <span class="value"><%= deletedUser.role %></span></p>
+                <p><span class="label">User ID:</span> <span class="value"><%= deletedUser.id %></span></p>
+                <p><span class="label">Deleted At:</span> <span class="value"><%= deletedUser.deletedAt %></span></p>
+            </div>
+
+            <div class="section">
+                <h3>User Details (Who Performed Deletion)</h3>
+                <p><span class="label">Name:</span> <span class="value"><%= userDetails.name %></span></p>
+                <p><span class="label">Email:</span> <span class="value"><%= userDetails.email %></span></p>
+                <p><span class="label">Role:</span> <span class="value"><%= userDetails.role %></span></p>
+                <p><span class="label">User ID:</span> <span class="value"><%= userDetails.id %></span></p>
+                <p><span class="label">IP Address:</span> <span class="value"><%= userDetails.ipAddress %></span></p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

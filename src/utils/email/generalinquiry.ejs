@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmland</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Basic reset */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      /* General styles */
+      body {
+        background-color: #ffffff;
+        margin: 0 auto;
+        max-width: 700px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f4fffb;
+      }
+
+      .logo {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .logo img {
+        width: 160px;
+        height: auto;
+      }
+
+      .content {
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+
+      .content .section-title {
+        font-size: 15px;
+        text-align: left;
+        color: #00a76f;
+        font-weight: 600;
+      }
+
+      .content p {
+        font-size: 0.9rem;
+        text-align: justify;
+        color: #212b36;
+        line-height: 25px;
+        margin: 15px 0;
+      }
+
+      .inquiry-details {
+        border-top: 1px solid #ade9d5;
+        border-bottom: 1px solid #ade9d5;
+        padding: 10px 0;
+        margin: 20px 0;
+      }
+
+      .inquiry-details .details-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+
+      .inquiry-details p {
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin-top: 10px;
+      }
+
+      .signature {
+        font-size: 0.9rem;
+        text-align: left;
+        margin: 20px;
+        color: #212b36;
+      }
+
+      .signature span {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #212b36;
+      }
+
+      .banner {
+        margin: 20px 0;
+        background-image: url("https://flb-public.s3.ap-south-1.amazonaws.com/evo-mail-banner.png");
+        aspect-ratio: 16 / 2;
+        height: 7rem;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem;
+        background-repeat: no-repeat;
+      }
+
+      .footer {
+        background: #00a76f;
+        border-top: 2px solid white;
+        padding: 0.5rem 0.7rem;
+        margin-top: 20px;
+        color: white !important;
+        font-size: 1.125rem;
+        font-weight: 600;
+        text-align: center;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .footer a {
+        color: #fff;
+        font-size: 0.85rem;
+        text-decoration: none;
+        margin-left: .15rem;
+      }
+
+      .footer img {
+        width: 1.25rem;
+        height: auto;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+      .footer p {
+        font-size: 1rem;
+        color: #fff;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .footer-links {
+        margin-left: auto;
+      }
+
+      /* Responsive styles */
+      @media only screen and (max-width: 600px) {
+        body {
+          padding: 0;
+        }
+        .container {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 auto;
+          padding: 5px;
+        }
+
+        .content {
+          padding: 0;
+        }
+
+        .logo img {
+          width: 120px;
+        }
+
+        .content p,
+        .inquiry-details p {
+          font-size: 0.8rem;
+          margin: 10px 0;
+        }
+
+        .footer {
+          color: #fff;
+        }
+        .footer p {
+          color: #fff;
+        }
+        .footer a {
+          font-size: 0.5rem;
+        }
+
+        .footer img {
+          width: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="#"
+          ><img
+            src="https://flb-public.s3.ap-south-1.amazonaws.com/Farmlandlogo%281%29.png"
+            alt="logo"
+        /></a>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <p class="section-title">General Inquiry</p>
+
+        <div>
+          <p style="font-size: 12px; font-weight: 600">Dear Admin,</p>
+          <p>We've received a general inquiry from a user on the platform.</p>
+        </div>
+
+        <!-- Inquiry Details -->
+        <div class="inquiry-details">
+          <p class="details-title">Inquiry Details:</p>
+          <p>
+            <strong>User Name:</strong>
+            <%= name %>
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <%= email %>
+          </p>
+          <p>
+            <strong>Phone:</strong>
+            <%= phone %>
+          </p>
+        </div>
+
+        <p>
+          For further assistance or clarification, please don't hesitate to
+          contact our support team at
+          <a
+            href="#"
+            style="color: #00a76f; font-weight: 700; text-decoration: none"
+            >info@farmlandbazaar.com</a
+          >.
+        </p>
+        <p>We eagerly await your response!</p>
+
+        <!-- Signature -->
+        <p class="signature">
+          Best Regards,<br />
+          <span>Farmland Bazaar</span>
+        </p>
+
+        <!-- Banner -->
+        <div class="banner"></div>
+
+        <!-- Footer -->
+        <div class="footer">
+          <p>Farmland Bazaar</p>
+          <span class="footer-links">
+            <span>
+              <a href="https://farmlandbazaar.com/terms">Terms of Service</a>
+              <a
+                href="https://farmlandbazaar.com/privacy-policy"
+                >Privacy Policy</a
+              >
+            </span>
+            <span>
+              <a href="https://www.youtube.com/channel/UCozy6ntUQTBuZI1I3IwoTCw"
+                ><img
+                  src="https://flb-public.s3.ap-south-1.amazonaws.com/youtube.png"
+                  alt="youtube"
+              /></a>
+              <a href="https://www.instagram.com/farmlandbazaar/"
+                ><img
+                  src="https://flb-public.s3.ap-south-1.amazonaws.com/instagram.png"
+                  alt="instagram"
+              /></a>
+              <a href="https://www.facebook.com/farmlandbazaar"
+                ><img
+                  src="https://flb-public.s3.ap-south-1.amazonaws.com/facebook%281%29.png"
+                  alt="facebook"
+              /></a>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

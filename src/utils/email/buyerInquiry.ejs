@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmland</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  </head>
+  <body bgcolor="#f4fffb" style="font-family: 'Open Sans', Arial, sans-serif; margin:0; padding:0;">
+    <div style="background-color: #f4fffb; min-height: 100vh; padding: 0;">
+      <div style="max-width: 600px; margin: 40px auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); overflow: hidden;">
+        <!-- Header -->
+        <div style="background: linear-gradient(90deg, #00a76f 60%, #ade9d5 100%); padding: 32px 0 16px 0; text-align: center;">
+          <a href="#"><img src="https://flb-public.s3.ap-south-1.amazonaws.com/Farmlandlogo%281%29.png" alt="logo" width="160" style="margin-bottom: 8px;" /></a>
+        </div>
+        <!-- Main Content -->
+        <div style="padding: 32px 32px 16px 32px;">
+          <h2 style="color: #00a76f; font-size: 1.5rem; font-weight: 700; margin: 0 0 18px 0;">Enquiry Raised</h2>
+          <p style="font-size: 1.1rem; color: #212b36; font-weight: 600; margin: 0 0 8px 0;">Dear <%= buyerName %>,</p>
+          <p style="color: #212b36; font-size: 1rem; font-weight: 400; margin: 0 0 18px 0; text-align: justify;">
+            Thank you for your interest in the <strong><%= propertyName %></strong> property. 
+            Your inquiry has been successfully received. 
+            <br><br>Our team will review your request and get back to you shortly with the necessary information or next steps.
+            <br><br>For any questions or further assistance, feel free to reach out to our support team at <strong>info@farmlandbazaar.com</strong>.
+            <br><br> We appreciate your interest and look forward to assisting you!
+          </p>
+          <!-- <div style="margin: 24px 0; text-align: center;">
+            <a href="mailto:info@farmlandbazaar.com" style="display: inline-block; background: #00a76f; color: #fff; font-weight: 600; padding: 12px 32px; border-radius: 24px; text-decoration: none; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,167,111,0.08);">Contact Support</a>
+          </div>
+          <p style="font-size: 0.98rem; color: #212b36; margin: 0 0 8px 0; text-align: justify;">
+            For further assistance or clarification, please don't hesitate to contact our support team at <a href="mailto:info@farmlandbazaar.com" style="color: #00a76f; font-weight: 700; text-decoration: none;">info@farmlandbazaar.com</a>.
+          </p>
+          <p style="font-size: 0.98rem; color: #212b36; margin: 0 0 18px 0; text-align: justify;">We eagerly await your message!</p> -->
+          <p style="margin: 0 0 8px 0;">
+            <span style="font-size: 1rem; color: #212b36;">Best Regards,</span><br />
+            <span style="color: #00a76f; font-size: 1.1rem; font-weight: 700;">Farmland Bazaar</span>
+          </p>
+        </div>
+        <!-- Banner -->
+        <div style="margin: 0 32px 32px 32px;">
+          <div style="background-image: url('https://flb-public.s3.ap-south-1.amazonaws.com/evo-mail-banner.png'); padding: 0 2rem; aspect-ratio: 16 / 2; background-size: cover; background-position: center; border-radius: 1rem; background-repeat: no-repeat; min-height: 60px;"></div>
+        </div>
+        <!-- Footer -->
+        <div style="background: #00a76f; padding: 24px 0 16px 0; text-align: center; border-top: 2px solid #fff;">
+          <div style="margin-bottom: 12px;">
+            <a href="https://farmlandbazaar.com/terms" style="color: #fff; font-size: .95rem; margin: 0 8px; text-decoration: underline;">Terms of Service</a>
+            <a href="https://farmlandbazaar.com/privacy-policy" style="color: #fff; font-size: .95rem; margin: 0 8px; text-decoration: underline;">Privacy Policy</a>
+          </div>
+          <div style="margin-top: 8px;">
+            <a href="https://www.youtube.com/channel/UCozy6ntUQTBuZI1I3IwoTCw" style="display: inline-block; margin: 0 6px;">
+              <img style="width: 1.5rem; aspect-ratio: 1/1; vertical-align: middle; border-radius: 50%; background: #fff; padding: 2px; transition: background 0.2s;" src="https://flb-public.s3.ap-south-1.amazonaws.com/youtube.png" alt="youtube" />
+            </a>
+            <a href="https://www.instagram.com/farmlandbazaar/" style="display: inline-block; margin: 0 6px;">
+              <img style="width: 1.3rem; aspect-ratio: 1/1; vertical-align: middle; border-radius: 50%; background: #fff; padding: 2px; transition: background 0.2s;" src="https://flb-public.s3.ap-south-1.amazonaws.com/instagram.png" alt="instagram" />
+            </a>
+            <a href="https://www.facebook.com/farmlandbazaar" style="display: inline-block; margin: 0 6px;">
+              <img style="width: 1.3rem; aspect-ratio: 1/1; vertical-align: middle; border-radius: 50%; background: #fff; padding: 2px; transition: background 0.2s;" src="https://flb-public.s3.ap-south-1.amazonaws.com/facebook%281%29.png" alt="facebook" />
+            </a>
+          </div>
+          <p style="color: #fff; font-size: 0.95rem; margin-top: 18px;">&copy; <%= new Date().getFullYear() %> Farmland Bazaar. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+  
